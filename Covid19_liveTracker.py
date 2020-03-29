@@ -6,7 +6,11 @@ import os
 #country_name=input("Enter the Country name: ")
 country_name="USA"
 
-os.remove("message.txt")
+try:
+    os.remove("message.txt")
+except:
+    print("no file exists, will make one")
+    
 f = open("message.txt", "a+")
 
 def covid19(country):
